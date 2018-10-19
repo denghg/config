@@ -1,0 +1,10 @@
+server:
+  port: 8765
+
+ 
+turbine:
+  app-config: sysmana-web-server
+  cluster-name-expression: new String("default")
+  aggregator:
+    cluster-config: default
+ # instanceUrlSuffix: /hystrix.stream
