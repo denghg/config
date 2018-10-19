@@ -1,0 +1,36 @@
+server:
+  port: 8902
+
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    sysmana-service: /sysmana/**
+    sysmana-config-service: /sysconfig/**
+#配置暴露监控节点地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      cors:
+        allowed-origins: '*'
+        allowed-methods: '*'
+
+
+auth-server: http://192.168.1.103:8903 # 认证服务器地址
+
+security:
+  oauth2:
+    client:
+      client-id: sys-mana
+      client-secret: zjd
+      scope: sysmana
+    #      access-token-uri: http://192.168.1.103:8903/oauth/token
+#      user-authorization-uri: http://192.168.1.103:8903/sysmanaoauth/authorize
+    resource:
+      service-id: sysmana-service
+      token-info-uri: http://192.168.1.103:8903/oauth/check_token
+      #token-info-uri: /api/sysmana/oauth/check_token
+
+

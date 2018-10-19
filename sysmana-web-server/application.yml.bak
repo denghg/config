@@ -1,0 +1,38 @@
+server:
+  port: 8080
+#spring:
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+#  zipkin:
+ #   sender:
+ #     type: rabbit
+#    base-url: http://192.168.1.103:9410/
+#    sender:
+#      type: kafka
+#      type: rabbit
+#    rabbitmq:
+#      queue: zhuanjiaodian.zipkin
+#  rabbitmq:
+#    addresses: 192.168.1.102
+#    port: 5672
+#    username: zipkin
+#    password: zipkin
+# REDIS (RedisProperties)
+#  redis:
+#    database: 1 # Redis数据库索引（默认为0）
+#    host: 192.168.1.102 # Redis服务器地址
+#    port: 6379  # Redis服务器连接端口
+#    password: root  # Redis服务器连接密码（默认为空）
+#    lettuce:
+#      pool:
+#       # 连接池最大连接数（使用负值表示没有限制）
+#        max-active: 8
+#        ## 连接池最大阻塞等待时间（使用负值表示没有限制）
+#        max-wait: -1ms
+#        ## 连接池中的最大空闲连接
+#        max-idle: 8
+ 
+
+zjd:
+  test: test11111222
